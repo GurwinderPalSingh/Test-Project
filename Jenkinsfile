@@ -10,7 +10,7 @@ pipeline {
         stage ('CHECKOUT') {
             steps {
                       sh 'cd /opt/gitRepo/testing'
-                      git clone https://GurwinderPalSingh:Diamonds77@github.com/GurwinderPalSingh/Test-Project.git        
+                      sh 'git clone https://GurwinderPalSingh:Diamonds77@github.com/GurwinderPalSingh/Test-Project.git'        
             }
         }
 
