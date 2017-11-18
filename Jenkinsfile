@@ -15,7 +15,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                     sh "${maven}/bin/maven -B verify"
+                    
                          echo 'Build has been started'
             }
              post {
