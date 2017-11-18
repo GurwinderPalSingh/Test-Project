@@ -10,13 +10,13 @@ pipeline {
         stage ('CHECKOUT') {
             steps {
                       sh 'cd /opt/gitRepo/testing'
-                      checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '891c4be8-a91b-40db-ac42-9069fc83068e', url: 'https://github.com/GurwinderPalSingh/Test-Project.git']]])
+                      git clone https://GurwinderPalSingh:Diamonds77@github.com/GurwinderPalSingh/Test-Project.git        
             }
         }
 
         stage ('Build') {
             steps {
-                    
+                         sh 'echo $pwd'                
                          echo 'Build has been started'
             }
              post {
