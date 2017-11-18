@@ -15,13 +15,13 @@ pipeline {
         }
 
         stage ('Build') {
-            steps {
-                         sh 'echo $pwd'                
-                         echo 'Build has been started'
+                          steps {
+                                   sh 'echo $pwd'                
+                                   sh 'echo "Build has been started"'
             }
              post {
                 success {
-                           echo 'Build has been completed'
+                           sh 'echo "Build has been completed"'
                         }
                  }
                
